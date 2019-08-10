@@ -12,7 +12,7 @@
     "start:prod": "node server.js",
     "start:dev": "node_modules/.bin/sequelize db:migrate && concurrently \"nodemon --ignore 'client/*' \" \"npm run client \"",
     "client": "cd client && npm run start",
-    "build": "node_modules/.bin/sequelize db:migrate && cd client && npm install && npm run build"
+    "build": "sequelize db:migrate && cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
