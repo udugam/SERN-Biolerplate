@@ -1,7 +1,7 @@
 {
   "name": "sern-boilerplate",
   "version": "1.0.0",
-  "description": "A heroku deployable SERN app with AWS Authentication",
+  "description": "A heroku deployable SERN stack that uses JawsDB",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
