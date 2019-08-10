@@ -1,0 +1,35 @@
+{
+  "name": "sern-boilerplate",
+  "version": "1.0.0",
+  "description": "A heroku deployable SERN app with AWS Authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:prod": "node server.js",
+    "start:dev": "node_modules/.bin/sequelize db:migrate && concurrently \"nodemon --ignore 'client/*' \" \"npm run client \"",
+    "client": "cd client && npm run start",
+    "build": "cd client && npm install && npm run build",
+    "heroku-postbuild": "node_modules/.bin/sequelize db:migrate && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udugam/SERN-Boilerplate.git"
+  },
+  "author": "Ryan Udugampola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udugam/SERN-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/udugam/SERN-Boilerplate#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "sequelize": "^5.13.0",
+    "sequelize-cli": "^5.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "nodemon": "^1.19.1"
+  }
+}
